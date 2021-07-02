@@ -19,7 +19,12 @@ def start_game():
 
 
 start_game()
-field_size = int(input("Введите размер поля \n"))
+while True:
+    input_field_size = input("Введите размер поля \n")
+    if input_field_size.isdigit():
+        break
+
+field_size = int(input_field_size)
 playing_field = generate_playing_field(field_size)
 
 
